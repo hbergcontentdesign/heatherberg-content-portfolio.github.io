@@ -43,34 +43,14 @@
             color: #005f73;
             border-bottom: 3px solid #005f73;
             padding-bottom: 8px;
-            cursor: pointer;
-            position: relative;
             font-size: 2em;
             font-weight: 600;
-        }
-
-        h2::after {
-            content: "\f078";
-            font-family: "FontAwesome";
-            font-size: 0.8em;
-            position: absolute;
-            right: 0;
-            transition: transform 0.3s;
-        }
-
-        .collapsed h2::after {
-            transform: rotate(-90deg);
         }
 
         ul {
             list-style: none;
             padding-left: 0;
-            display: none;
             margin: 20px 0;
-        }
-
-        ul.visible {
-            display: block;
         }
 
         ul li {
@@ -174,55 +154,24 @@
             margin-right: 8px;
         }
 
-        /* Interactive Section Transition */
-        ul {
-            transition: all 0.5s ease-in-out;
-        }
-
-        ul li p {
-            margin: 5px 0;
-        }
-
-        /* Hover Effects for Section Headings */
-        .section h2:hover {
-            color: #ee9b00;
-        }
-
         /* Footer Styling */
         footer p {
             font-size: 1em;
             letter-spacing: 1px;
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.section h2');
-            sections.forEach(section => {
-                section.addEventListener('click', () => {
-                    const list = section.nextElementSibling;
-                    if (list.classList.contains('visible')) {
-                        list.classList.remove('visible');
-                        section.parentElement.classList.remove('collapsed');
-                    } else {
-                        list.classList.add('visible');
-                        section.parentElement.classList.add('collapsed');
-                    }
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
         <h1>Heather Berg</h1>
         <p>Senior Content Designer | Technical Writer</p>
-        <p>Email: <a href="mailto:heather.berg@myemail.com">heather.berg@myemail.com</a> | Phone: 713-560-6761 | Location: Texas</p> <!-- Updated Email Address -->
+        <p>Email: <a href="mailto:heather.berg@myemail.com">heather.berg@myemail.com</a> | Phone: 713-560-6761 | Location: Texas</p>
     </header>
 
     <div class="container">
         <section class="section">
             <h2>Professional Summary</h2>
-            <ul class="visible">
+            <ul>
                 <li>Experienced and versatile Senior Content Designer and Technical Writer with over 10 years of experience in content strategy, UX writing, and technical documentation. Skilled at transforming complex technical concepts into clear, user-centered content that drives engagement. Proven ability to develop content strategies, collaborate with cross-functional teams, and lead initiatives that improve usability and increase organic traffic through SEO best practices.</li>
             </ul>
         </section>
@@ -278,7 +227,7 @@
             </ul>
         </section>
 
-        <section class=" section military">
+        <section class="section military">
             <h2>Military Experience</h2>
             <ul>
                 <li>
@@ -295,15 +244,15 @@
 
         <section class="section">
             <h2>Education</h2>
-            <ul class="visible">
+            <ul>
                 <li><strong>Bachelor of Arts: Communication</strong></li>
                 <li>University of Maryland University College, Bamberg, Germany | Graduated 2009</li>
             </ul>
         </section>
 
-        <section class=" section skills">
+        <section class="section skills">
             <h2>Skills</h2>
-            <ul class="visible">
+            <ul>
                 <li><i class="fas fa-pencil-alt"></i> UX Writing & Content Strategy</li>
                 <div class="skill-progress">
                     <div class="progress-bar" style="width: 90%;">90%</div>
@@ -335,10 +284,10 @@
             </ul>
         </section>
 
-        <section class=" section portfolio">
+        <section class="section portfolio">
             <h2>Portfolio</h2>
-            <ul class="visible">
-                <li>Visit my GitHub page for interactive documentation, design prototypes, and SEO-optimized content samples: <a href="https://github.com/hbergcontentdesign/heatherberg-content-portfolio.github.io">GitHub Portfolio</a>.</li>
+            <ul>
+                <li>Visit my GitHub page for interactive documentation, design prototypes, and SEO-optimized content samples: <a href="portfolio.html">View Portfolio</a>.</li>
             </ul>
         </section>
     </div>
