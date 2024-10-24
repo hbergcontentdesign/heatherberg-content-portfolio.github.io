@@ -1,298 +1,237 @@
-/* General Styling */
-body {
-    font-family: 'Inter', sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F4F9;
     color: #333;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+    line-height: 1.8;
     padding: 20px;
+    transition: all 0.3s ease;
 }
 
-/* Navigation */
-.navbar {
-    background-color: #1a1a1a;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    color: #fff;
-    font-size: 1.5em;
+a {
     text-decoration: none;
+    color: #0057A1;
+    transition: color 0.3s;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+a:hover {
+    color: #FF6B6B;
 }
 
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    color: #66aaff;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #fff;
-    transition: all 0.3s;
-}
-
-/* Header */
-.header {
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-    background-image: linear-gradient(135deg, #1a1a1a 25%, #2d2d2d 75%);
-}
-
-.header h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 1.5em;
-    font-weight: 400;
-}
-
-/* Sections */
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
+h1, h2, h3 {
+    color: #002F65;
     font-weight: 700;
 }
 
-/* About Me */
-.about p {
-    font-size: 1.2em;
-    line-height: 1.6;
+h1 {
+    font-size: 44px;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
-/* Resume */
-.resume {
-    background-color: white;
-    background-image: url('assets/images/pattern.svg');
-    background-size: 300px;
-    background-position: center;
-}
-
-.resume-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-}
-
-.summary {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-
-.experience, .skills {
-    padding-top: 20px;
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0057A1;
 }
 
 h3 {
-    font-size: 1.8em;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-p, ul {
-    font-size: 1.1em;
-    line-height: 1.6;
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
+    margin-left: 20px;
 }
 
 ul li {
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-/* Skills */
-.skill-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.skill-item {
-    width: 100%;
-}
-
-.progress-bar {
-    background-color: #ddd;
-    border-radius: 10px;
-    height: 10px;
-    margin-top: 5px;
-    overflow: hidden;
-}
-
-.progress-bar .fill {
-    background-color: #007acc;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* Portfolio Section */
-.portfolio {
-    background-color: #f0f0f0;
-}
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 300px;
-    padding: 20px;
+/* Sticky Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #002F65;
+    z-index: 1000;
+    padding: 15px;
     text-align: center;
-    transition: transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
 }
 
-.card img {
-    max-width: 100%;
-    border-radius: 10px;
+.navbar a:hover {
+    background-color: #FF6B6B;
+    color: white;
 }
 
-.card h3 {
-    margin-top: 15px;
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #0057A1;
+    font-size: 46px;
+}
+
+header p {
+    font-size: 20px;
     color: #333;
 }
 
-.card p {
-    font-size: 1em;
-    margin: 15px 0;
+/* Skills Section */
+.skills-container {
+    background-color: #F0F5F9;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
 }
 
-.card .cta-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007acc;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #0057A1;
+    padding: 12px 20px;
+    border-radius: 20px;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
 }
 
-.card .cta-button:hover {
-    background-color: #66aaff;
+.skill i {
+    color: #E0E1DD;
 }
 
-/* Contact Section */
-.contact {
-    text-align: center;
+.skill:hover {
+    background-color: #FF6B6B;
 }
 
-.contact p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px;
+/* Experience Section */
+.experience {
+    margin-top: 30px;
 }
 
-.contact .cta-button {
-    padding: 15px 30px;
-    background-color: #007acc;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
+.experience h3 {
+    color: #002F65;
 }
 
-.contact .cta-button:hover {
-    background-color: #66aaff;
+/* Portfolio Section */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.portfolio-card {
+    background-color: #F0F5F9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-card h4 {
+    font-size: 22px;
+    color: #0057A1;
+}
+
+.portfolio-card p {
+    font-size: 16px;
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
-    color: white;
     text-align: center;
+    margin-top: 50px;
     padding: 20px 0;
+    background-color: #002F65;
+    color: #E0E1DD;
 }
 
 footer p {
-    margin: 0;
-    font-size: 1em;
+    color: #E0E1DD;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 100vh;
-        top: 70px;
-        flex-direction: column;
-        background-color: #1a1a1a;
-        width: 200px;
-        align-items: center;
-        display: none;
-    }
+footer a {
+    color: #FF6B6B;
+}
 
-    .nav-links.active {
-        display: flex;
-    }
+footer a:hover {
+    color: #F7B801;
+}
 
-    .nav-links li {
-        margin: 20px 0;
-    }
+.line {
+    margin: 30px 0;
+    height: 2px;
+    background-color: #E0E1DD;
+}
 
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
+/* Button Styling */
+.button {
+    background-color: #0057A1;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
 
-    .resume-grid {
-        grid-template-columns: 1fr;
-    }
+.button:hover {
+    background-color: #FF6B6B;
+}
+
+/* Interactivity */
+.portfolio-card:hover,
+.skills .skill:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
