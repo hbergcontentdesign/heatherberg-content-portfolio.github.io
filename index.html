@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heather Berg - Interactive Resume Showcase</title>
+    <title>Heather Berg - Interactive Resume & Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
@@ -49,19 +49,6 @@
             font-weight: 600;
         }
 
-        h2::after {
-            content: "\f078";
-            font-family: "FontAwesome";
-            font-size: 0.8em;
-            position: absolute;
-            right: 0;
-            transition: transform 0.3s;
-        }
-
-        .collapsed h2::after {
-            transform: rotate(-90deg);
-        }
-
         ul {
             list-style: none;
             padding-left: 0;
@@ -87,16 +74,6 @@
             margin-top: 40px;
         }
 
-        .github-link a {
-            color: #003366;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
         /* Skill Progress Bar */
         .skill-progress {
             width: 100%;
@@ -116,82 +93,56 @@
             font-weight: bold;
         }
 
-        /* Buttons and Links */
-        a {
-            color: #003366;
-            text-decoration: none;
-            font-weight: bold;
+        /* Portfolio Section */
+        .portfolio {
+            background: url('/mnt/data/2024-10-24_09-23-01.PNG') no-repeat center center;
+            background-size: cover;
+            padding: 50px;
+            color: #fff;
         }
 
-        a: hover {
+        .portfolio a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .portfolio a:hover {
             text-decoration: underline;
         }
 
-        /* Container Spacing */
-        .section {
-            margin-bottom: 40px;
+        /* Email Styling */
+        a {
+            color: #ff9900;
+            font-weight: bold;
+            text-decoration: none;
         }
 
-        .section ul {
-            margin-top: 15px;
+        a:hover {
+            text-decoration: underline;
+            color: #ffffff;
+            background-color: #003366;
+            padding: 3px 5px;
+            border-radius: 5px;
         }
 
         /* Responsive Design */
-        @media (max-width: 768 px) {
+        @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5 em;
+                font-size: 2.5em;
             }
 
             .container {
-                padding: 20 px;
+                padding: 20px;
             }
 
             h2 {
-                font-size: 1.6 em;
+                font-size: 1.6em;
             }
 
             .skill-progress .progress-bar {
-                font-size: 0.9 em;
+                font-size: 0.9em;
             }
-        }
-
-        /* Header Styling */
-        header p {
-            font-size: 1.2 em;
-            margin-top: 10 px;
-        }
-
-        /* Improved Section Styling */
-        .section h2 {
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1 px;
-        }
-
-        /* Skill List */
-        li i {
-            color: #ff9900;
-            margin-right: 8 px;
-        }
-
-        /* Interactive Section Transition */
-        ul {
-            transition: all 0.5s ease-in-out;
-        }
-
-        ul li p {
-            margin: 5px 0;
-        }
-
-        /* Hover Effects for Section Headings */
-        .section h2:hover {
-            color: #ff9900;
-        }
-
-        /* Footer Styling */
-        footer p {
-            font-size: 1 em;
-            letter-spacing: 1 px;
         }
     </style>
     <script>
@@ -202,10 +153,8 @@
                     const list = section.nextElementSibling;
                     if (list.classList.contains('visible')) {
                         list.classList.remove('visible');
-                        section.parentElement.classList.remove('collapsed');
                     } else {
                         list.classList.add('visible');
-                        section.parentElement.classList.add('collapsed');
                     }
                 });
             });
@@ -216,126 +165,86 @@
     <header>
         <h1>Heather Berg</h1>
         <p>Senior Content Designer | Technical Writer</p>
-        <p>Email: <a href="mailto:heather.knapp83@gmail.com">heather.knapp83@gmail.com</a> | Phone: 713-560-6761 | Location: Texas</p>
+        <p>Email: <a href="mailto:hberg.contentdesign@gmail.com">hberg.contentdesign@gmail.com</a> | Phone: 713-560-6761 | Location: Texas</p>
     </header>
 
     <div class="container">
+        <!-- Professional Summary -->
         <section class="section">
             <h2>Professional Summary</h2>
             <ul class="visible">
-                <li>Experienced and versatile Senior Content Designer and Technical Writer with over 10 years of experience in content strategy, UX writing, and technical documentation. Skilled at transforming complex technical concepts into clear, user-centered content that drives engagement. Proven ability to develop content strategies, collaborate with cross-functional teams, and lead initiatives that improve usability and increase organic traffic through SEO best practices.</li>
+                <li>Creative and results-driven Senior Content Designer and Technical Writer with over 10 years of experience developing high-quality, engaging SEO content for both B2B SaaS and technical industries.</li>
+                <li>Proven expertise in creating short-form and long-form content, including user manuals, product guides, API documentation, and thought leadership articles.</li>
+                <li>Adept at maintaining brand voice, optimizing content for SEO, and keeping up-to-date with industry trends.</li>
             </ul>
         </section>
 
+        <!-- Experience -->
         <section class="section">
             <h2>Experience</h2>
-            <ul>
-                <li>
-                    <strong>Senior Content Designer, Facil-IT</strong>
-                    <p><em>Remote, United States | Nov 2023 - Oct 2024</em></p>
-                    <ul>
-                        <li>Led content design for user guides and release notes templates, ensuring clarity and usability.</li>
-                        <li>Utilized Figma to develop user experiences and collaborated on design prototypes.</li>
-                        <li>Managed documentation tasks using Jira and Confluence, keeping up-to-date with product enhancements.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Senior Content Designer, AvidXchange</strong>
-                    <p><em>Remote, United States | Jul 2019 - Oct 2023</em></p>
-                    <ul>
-                        <li>Spearheaded content design and strategy for financial products in a B2B SaaS environment.</li>
-                        <li>Created detailed user manuals, installation guides, and onboarding content to meet product objectives.</li>
-                        <li>Employed SEO strategies to drive organic search visibility for various product knowledge articles.</li>
-                        <li>Mentored junior writers and facilitated content development across owned and paid channels.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Technical Writer, P2 Energy Solutions</strong>
-                    <p><em>Remote, United States | Apr 2017 - Jul 2019</em></p>
-                    <ul>
-                        <li>Developed technical content, user manuals, and UI documentation for oil & gas software solutions.</li>
-                        <li>Engaged with subject matter experts to ensure accuracy and quality of content.</li>
-                        <li>Improved documentation processes through single-sourcing strategies and streamlined content reuse.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Technical Writer, Weatherford International</strong>
-                    <p><em>Houston, TX | Mar 2013 - Feb 2016</em></p>
-                    <ul>
-                        <li>Created and edited content for complex technical equipment, including LWD and MWD downhole tools.</li>
-                        <li>Worked with cross-functional teams to deliver accurate, user-friendly technical manuals.</li>
-                        <li>Managed assignments using Windchill for efficient content version control.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Surgical Tech, Oak Bend Medical Center</strong>
-                    <p><em>Rosenberg, TX | Jun 2005 - Oct 2007</em></p>
-                    <ul>
-                        <li>Prepared the surgical suite and managed supplies and instrumentation for surgical procedures.</li>
-                        <li>Provided technical support to surgeons, including instrument handling and equipment setup.</li>
-                    </ul>
-                </li>
+            <ul class="visible">
+                <li><strong>Senior Content Designer | Facil-IT</strong></li>
+                <li><em>November 2023 – October 2024 | Remote, United States</em></li>
+                <li>Developed various types of high-quality, engaging SEO content (short-form and long-form) to drive organic traffic.</li>
+                <li>Repurposed existing content to optimize for different audiences, channels, and platforms.</li>
+
+                <li><strong>Senior Content Designer | AvidXchange</strong></li>
+                <li><em>July 2019 – October 2023 | Remote, United States</em></li>
+                <li>Created SEO-driven content to support lead generation and customer retention for B2B payment systems.</li>
+
+                <li><strong>Technical Writer | P2 Energy Solutions</strong></li>
+                <li><em>April 2017 – July 2019 | Houston, TX</em></li>
+                <li>Created and edited customer-facing technical content, including manuals, UI prompts, and system alerts.</li>
+
+                <li><strong>Technical Writer | Weatherford International</strong></li>
+                <li><em>March 2013 – February 2016 | Houston, TX</em></li>
+                <li>Developed and maintained technical content, including installation guides and user manuals for oil and gas equipment.</li>
             </ul>
         </section>
 
-        <section class="section military">
+        <!-- Military Experience -->
+        <section class="section">
             <h2>Military Experience</h2>
-            <ul>
-                <li>
-                    <strong>Surgical Tech / Soldier, U.S. Army</strong>
-                    <p><em>San Antonio, TX | Mar 2003 - Feb 2005</em></p>
-                    <ul>
-                        <li>Assisted surgeons in surgical procedures, ensuring compliance with sterile techniques.</li>
-                        <li>Trained and supervised new surgical technicians, maintaining focus under high-pressure conditions.</li>
-                        <li>Awarded National Defense Service Medal and Army Service Ribbon for exemplary service.</li>
-                    </ul>
-                </li>
+            <ul class="visible">
+                <li><strong>Surgical Tech / Soldier, U.S. Army</strong></li>
+                <li><em>San Antonio, TX | Mar 2003 - Feb 2005</em></li>
+                <li>Assisted surgeons during operations, ensuring all instruments were sterilized, and procedures followed strict hospital protocols.</li>
+                <li>Awarded National Defense Service Medal and Army Service Ribbon for exemplary service.</li>
             </ul>
         </section>
 
+        <!-- Education -->
         <section class="section">
             <h2>Education</h2>
             <ul class="visible">
-                <li><strong>Bachelor of Arts: Communication</strong></li>
-                <li>University of Maryland University College, Bamberg, Germany | Graduated 2009</li>
+                <li><strong>Bachelor of Arts in Communication</strong></li>
+                <li>University of Maryland University College, Bamberg, Germany (2009)</li>
             </ul>
         </section>
 
-        <section class="section skills">
+        <!-- Skills -->
+        <section class="section">
             <h2>Skills</h2>
             <ul class="visible">
-                <li><i class="fas fa-pencil-alt"></i> UX Writing & Content Strategy</li>
+                <li>UX Writing & Content Strategy</li>
                 <div class="skill-progress">
                     <div class="progress-bar" style="width: 90%;">90%</div>
                 </div>
-                <li><i class="fas fa-code"></i> HTML, CSS, Markdown for Interactive Content</li>
+
+                <li>HTML, CSS, Markdown for Interactive Content</li>
                 <div class="skill-progress">
                     <div class="progress-bar" style="width: 85%;">85%</div>
                 </div>
-                <li><i class="fas fa-edit"></i> Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 80%;">80%</div>
-                </div>
-                <li><i class="fas fa-tasks"></i> Task Management: JIRA & Confluence</li>
+
+                <li>Task Management: JIRA & Confluence</li>
                 <div class="skill-progress">
                     <div class="progress-bar" style="width: 88%;">88%</div>
-                </div>
-                <li><i class="fas fa-search"></i> SEO Tools: SEMRush, Ahref, Google Search Console</li>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 75%;">75%</div>
-                </div>
-                <li><i class="fas fa-users"></i> Cross-Functional Collaboration & Stakeholder Engagement</li>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 92%;">92%</div>
-                </div>
-                <li><i class="fas fa-project-diagram"></i> Project Management & Prioritization</li>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 85%;">85%</div>
                 </div>
             </ul>
         </section>
 
-        <section class=" section portfolio">
+        <!-- Portfolio Section -->
+        <section class="section portfolio">
             <h2>Portfolio</h2>
             <ul class="visible">
                 <li>Visit my GitHub page for interactive documentation, design prototypes, and SEO-optimized content samples: <a href="https://github.com/hbergcontentdesign/heatherberg-content-portfolio.github.io">GitHub Portfolio</a>.</li>
