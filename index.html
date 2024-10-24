@@ -1,259 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heather Berg - Interactive Resume & Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+<section id="resume">
+    <h2>Resume</h2>
 
-        header {
-            background-color: #003366;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #003366;
-            border-bottom: 3px solid #003366;
-            padding-bottom: 8px;
-            cursor: pointer;
-            position: relative;
-            font-size: 2em;
-            font-weight: 600;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            display: none;
-            margin: 20px 0;
-        }
-
-        ul.visible {
-            display: block;
-        }
-
-        ul li {
-            margin: 12px 0;
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #003366;
-            color: #ffffff;
-            margin-top: 40px;
-        }
-
-        /* Skill Progress Bar */
-        .skill-progress {
-            width: 100%;
-            background-color: #f1f1f1;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 10px 0;
-            height: 25px;
-        }
-
-        .skill-progress .progress-bar {
-            height: 100%;
-            text-align: center;
-            color: #fff;
-            background-color: #003366;
-            line-height: 25px;
-            font-weight: bold;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            background: url('/mnt/data/2024-10-24_09-23-01.PNG') no-repeat center center;
-            background-size: cover;
-            padding: 50px;
-            color: #fff;
-        }
-
-        .portfolio a {
-            color: #ffffff;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .portfolio a:hover {
-            text-decoration: underline;
-        }
-
-        /* Email Styling */
-        a {
-            color: #ff9900;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #ffffff;
-            background-color: #003366;
-            padding: 3px 5px;
-            border-radius: 5px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            .container {
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 1.6em;
-            }
-
-            .skill-progress .progress-bar {
-                font-size: 0.9em;
-            }
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.section h2');
-            sections.forEach(section => {
-                section.addEventListener('click', () => {
-                    const list = section.nextElementSibling;
-                    if (list.classList.contains('visible')) {
-                        list.classList.remove('visible');
-                    } else {
-                        list.classList.add('visible');
-                    }
-                });
-            });
-        });
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Heather Berg</h1>
-        <p>Senior Content Designer | Technical Writer</p>
-        <p>Email: <a href="mailto:hberg.contentdesign@gmail.com">hberg.contentdesign@gmail.com</a> | Phone: 713-560-6761 | Location: Texas</p>
-    </header>
-
-    <div class="container">
-        <!-- Professional Summary -->
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <ul class="visible">
-                <li>Creative and results-driven Senior Content Designer and Technical Writer with over 10 years of experience developing high-quality, engaging SEO content for both B2B SaaS and technical industries.</li>
-                <li>Proven expertise in creating short-form and long-form content, including user manuals, product guides, API documentation, and thought leadership articles.</li>
-                <li>Adept at maintaining brand voice, optimizing content for SEO, and keeping up-to-date with industry trends.</li>
-            </ul>
-        </section>
-
-        <!-- Experience -->
-        <section class="section">
-            <h2>Experience</h2>
-            <ul class="visible">
-                <li><strong>Senior Content Designer | Facil-IT</strong></li>
-                <li><em>November 2023 – October 2024 | Remote, United States</em></li>
-                <li>Developed various types of high-quality, engaging SEO content (short-form and long-form) to drive organic traffic.</li>
-                <li>Repurposed existing content to optimize for different audiences, channels, and platforms.</li>
-
-                <li><strong>Senior Content Designer | AvidXchange</strong></li>
-                <li><em>July 2019 – October 2023 | Remote, United States</em></li>
-                <li>Created SEO-driven content to support lead generation and customer retention for B2B payment systems.</li>
-
-                <li><strong>Technical Writer | P2 Energy Solutions</strong></li>
-                <li><em>April 2017 – July 2019 | Houston, TX</em></li>
-                <li>Created and edited customer-facing technical content, including manuals, UI prompts, and system alerts.</li>
-
-                <li><strong>Technical Writer | Weatherford International</strong></li>
-                <li><em>March 2013 – February 2016 | Houston, TX</em></li>
-                <li>Developed and maintained technical content, including installation guides and user manuals for oil and gas equipment.</li>
-            </ul>
-        </section>
-
-        <!-- Military Experience -->
-        <section class="section">
-            <h2>Military Experience</h2>
-            <ul class="visible">
-                <li><strong>Surgical Tech / Soldier, U.S. Army</strong></li>
-                <li><em>San Antonio, TX | Mar 2003 - Feb 2005</em></li>
-                <li>Assisted surgeons during operations, ensuring all instruments were sterilized, and procedures followed strict hospital protocols.</li>
-                <li>Awarded National Defense Service Medal and Army Service Ribbon for exemplary service.</li>
-            </ul>
-        </section>
-
-        <!-- Education -->
-        <section class="section">
-            <h2>Education</h2>
-            <ul class="visible">
-                <li><strong>Bachelor of Arts in Communication</strong></li>
-                <li>University of Maryland University College, Bamberg, Germany (2009)</li>
-            </ul>
-        </section>
-
-        <!-- Skills -->
-        <section class="section">
-            <h2>Skills</h2>
-            <ul class="visible">
-                <li>UX Writing & Content Strategy</li>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 90%;">90%</div>
-                </div>
-
-                <li>HTML, CSS, Markdown for Interactive Content</li>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 85%;">85%</div>
-                </div>
-
-                <li>Task Management: JIRA & Confluence</li>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 88%;">88%</div>
-                </div>
-            </ul>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section class="section portfolio">
-            <h2>Portfolio</h2>
-            <ul class="visible">
-                <li>Visit my GitHub page for interactive documentation, design prototypes, and SEO-optimized content samples: <a href="https://github.com/hbergcontentdesign/heatherberg-content-portfolio.github.io">GitHub Portfolio</a>.</li>
-            </ul>
-        </section>
+    <!-- Professional Summary -->
+    <div class="resume-section">
+        <h3>Professional Summary</h3>
+        <p>Experienced and versatile Content Designer and Technical Writer with over 10 years of experience in UX writing, content strategy, and technical documentation. Adept at transforming complex technical concepts into clear, user-centered content and engaging digital experiences. Extensive background in the oil & gas, software, and technology sectors, with a focus on user guides, installation guides, and interactive digital platforms. Proven expertise in leading cross-functional collaboration with product managers, engineers, and design teams to ensure cohesive content solutions. Passionate about creating intuitive, high-quality content that enhances product usability and drives user engagement.</p>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Heather Berg. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    <!-- Experience -->
+    <div class="resume-section">
+        <h3>Experience</h3>
+
+        <div class="experience-item">
+            <h4>Senior Content Designer, Facil-IT</h4>
+            <p>Remote, United States | Nov 2023 - Oct 2024</p>
+            <ul>
+                <li>Led content design efforts for the development of user guides and release notes templates, ensuring clarity and usability.</li>
+                <li>Built components in Figma to create cohesive user experiences and collaborated on design prototypes.</li>
+                <li>Used Jira to manage documentation tasks, track feedback, and streamline the content creation process.</li>
+                <li>Collaborated closely with product managers, engineers, and stakeholders to align content with product roadmaps and deliverables.</li>
+                <li>Implemented and maintained detailed documentation for technical users, enhancing product usability.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Senior Content Designer, AvidXchange</h4>
+            <p>Remote, United States | Jul 2019 - Oct 2023</p>
+            <ul>
+                <li>Spearheaded content design for multiple high-priority projects, transforming business and customer objectives into intuitive digital products.</li>
+                <li>Drove the content strategy process, leading concept ideation from wireframes to full-fidelity designs.</li>
+                <li>Collaborated with research and design teams to produce content that met customers' needs while adhering to company goals.</li>
+                <li>Led the design of content workflows that simplified the complexity of product features, making them accessible to diverse audiences.</li>
+                <li>Provided strategic content guidance and mentorship to junior writers and team members.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Technical Writer, P2 Energy Solutions</h4>
+            <p>Remote, United States | Apr 2017 - Jul 2019</p>
+            <ul>
+                <li>Responsible for multiple product teams, including Merrick, P2 Land, and IDEAS.</li>
+                <li>Designed and formulated PowerPoint slides for HPC development training.</li>
+                <li>Created and edited user-facing product text, such as error messages, prompts, and UI labels.</li>
+                <li>Managed content review processes with Subject Matter Experts (SMEs) and Business Analysts (BAs).</li>
+                <li>Analyzed and optimized content for reuse opportunities, focusing on filtered single-sourcing.</li>
+                <li>Wrote and managed help documentation, customer guides, and release notes for internal and external audiences.</li>
+                <li>Participated in SCRUM and QA processes to understand and predict documentation requirements.</li>
+                <li>Wrote installation guides for products including database configuration and setup.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Surgical Tech, Oak Bend Medical Center</h4>
+            <p>Rosenberg, TX | Jun 2005 - Oct 2007</p>
+            <ul>
+                <li>Responsible for preparing the surgical suite and managing supplies and instrumentation.</li>
+                <li>Scrubbed for a variety of surgical specialty cases and assisted in circulating duties.</li>
+                <li>Provided technical support to surgeons during operations, including managing instruments and ensuring proper equipment setup.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Military Experience -->
+    <div class="resume-section">
+        <h3>Military Experience</h3>
+        <div class="experience-item">
+            <h4>Surgical Tech / Soldier, U.S. Army</h4>
+            <p>San Antonio, TX | Mar 2003 - Feb 2005</p>
+            <ul>
+                <li>Instructed and supervised new surgical technicians in procedures and skills needed to perform effectively in the Operating Room.</li>
+                <li>Provided critical support in surgical procedures, managing surgical instruments and ensuring a sterile field.</li>
+                <li>Assisted surgeons in various specialties, demonstrating knowledge of perioperative patient care and maintaining proper inventory of all instruments.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="resume-section">
+        <h3>Education</h3>
+        <p><strong>Bachelor of Arts: Communication</strong></p>
+        <p>University of Maryland University College, Bamberg, Germany | Graduated 2009</p>
+    </div>
+
+    <!-- Software Skills -->
+    <div class="resume-section">
+        <h3>Software Skills</h3>
+        <ul>
+            <li><strong>Figma:</strong> Experienced in using Figma to create user-friendly wireframes, prototypes, and UI components, focusing on enhancing digital experiences and developing cohesive design systems.</li>
+            <li><strong>Adobe Suite:</strong> Proficient in Photoshop, InDesign, Illustrator, and Acrobat for designing visuals, editing graphics, and creating professional page layouts.</li>
+            <li><strong>Microsoft Office:</strong> Extensive experience with Word, Excel, PowerPoint, Outlook, and SharePoint for documentation, data analysis, and reporting.</li>
+            <li><strong>HTML:</strong> Proficient in creating structured, interactive, and accessible web content for user guides and application documentation.</li>
+            <li><strong>Jira & Confluence:</strong> Used to streamline content creation, manage documentation tasks, and track feedback.</li>
+            <li><strong>Jitbit Service Desk:</strong> Familiar with using this platform for managing customer service and support tasks.</li>
+        </ul>
+    </div>
+
+    <!-- What I Can Do for MaintainX -->
+    <div class="resume-section">
+        <h3>What I Can Do for MaintainX</h3>
+        <ul>
+            <li><strong>Content Strategy and Design:</strong> Develop clear and engaging content for user manuals, guides, and product documentation, ensuring MaintainX’s users have an intuitive and informative experience.</li>
+            <li><strong>Interactive Design:</strong> Create wireframes, prototypes, and UI components using Figma to align with MaintainX's brand identity, improving user experience and engagement.</li>
+            <li><strong>Efficient Documentation Processes:</strong> Use tools like Jira and Confluence to streamline content development, allowing for rapid iterations and up-to-date content management.</li>
+            <li><strong>Enhancing User Experience:</strong> Ensure MaintainX's platforms provide consistent and accessible content, creating tutorials and guides that are accessible to both technical and non-technical audiences, helping drive product adoption across diverse user groups.</li>
+        </ul>
+    </div>
+
+</section>
