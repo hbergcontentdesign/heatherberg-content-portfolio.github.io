@@ -1,120 +1,67 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1b1f23;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heather Berg - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Heather Berg Portfolio</h1>
+        <nav>
+            <a href="#guides">User Guides</a>
+            <a href="#release-notes">Release Notes</a>
+            <a href="#tutorials">Tutorials (with GIFs)</a>
+        </nav>
+    </header>
 
-header {
-    background-color: #24292e;
-    padding: 1rem;
-    text-align: center;
-}
+    <section id="guides">
+        <h2>User Guides</h2>
+        <div class="card-container">
+            <!-- Card for User Guide -->
+            <div class="card">
+                <img src="assets/images/guide1.png" alt="Guide Thumbnail">
+                <h3>How to Setup Your Company in Facil-IT</h3>
+                <p>Updated: September 25, 2024</p>
+                <a href="assets/guides/setup-guide.pdf" class="cta-button">Download Guide</a>
+            </div>
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
 
-header nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
+    <section id="release-notes">
+        <h2>Release Notes</h2>
+        <div class="card-container">
+            <!-- Card for Release Notes -->
+            <div class="card">
+                <img src="assets/images/release1.png" alt="Release Thumbnail">
+                <h3>Release Notes - Version 2.1.0</h3>
+                <p>Updated: August 10, 2024</p>
+                <a href="assets/release-notes/release-2.1.pdf" class="cta-button">View Release Notes</a>
+            </div>
 
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
 
-section {
-    padding: 2rem;
-}
+    <section id="tutorials">
+        <h2>Tutorials (with GIFs)</h2>
+        <div class="card-container">
+            <!-- Card for Tutorial with GIF -->
+            <div class="card">
+                <img src="assets/gifs/tutorial1.gif" alt="GIF Tutorial">
+                <h3>How to Dispatch Work Orders</h3>
+                <a href="assets/tutorials/dispatch-work-orders.pdf" class="cta-button">View Tutorial</a>
+            </div>
 
-/* Resume Section Styles */
-#resume {
-    background-color: #2d333b;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 2rem 0;
-}
+            <!-- Add more GIF cards as needed -->
+        </div>
+    </section>
 
-.resume-section {
-    margin-bottom: 2rem;
-}
-
-.resume-section h3 {
-    font-size: 1.8rem;
-    color: #0366d6;
-    margin-bottom: 1rem;
-}
-
-.resume-section p, .resume-section ul {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.resume-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.experience-item {
-    margin-bottom: 1.5rem;
-}
-
-.experience-item h4 {
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-}
-
-.experience-item ul {
-    margin-top: 0.5rem;
-    list-style: circle;
-}
-
-footer {
-    background-color: #24292e;
-    padding: 1rem;
-    text-align: center;
-    color: #ffffff;
-}
-
-footer a {
-    color: #0366d6;
-    text-decoration: none;
-}
-
-footer a: hover {
-    text-decoration: underline;
-}
-
-/* Interactive Hover Effects */
-.experience-item:hover h4 {
-    color: #28a745;
-    transition: color 0.3s ease-in;
-}
-
-.experience-item:hover ul {
-    list-style: square;
-    transition: list-style 0.3s ease-in;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0366d6;
-    color: #ffffff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-}
-
-.cta-button:hover {
-    background-color: #0053ba;
-    transition: background-color 0.3s ease-in;
-}
+    <footer>
+        <p>&copy; 2024 Heather Berg</p>
+    </footer>
+</body>
+</html>
