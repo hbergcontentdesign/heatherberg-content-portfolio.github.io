@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+h2::after {
+    content: "\f078";
+    font-family: "FontAwesome";
+    font-size: 0.8em;
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s;
+}
+
+.collapsed h2::after {
+    transform: rotate(-90deg);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: none;
+}
+
+ul.visible {
+    display: block;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+.github-link a {
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Skill Progress Bar */
+.skill-progress {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.skill-progress .progress-bar {
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #003366;
+}
+
+/* Buttons and Links */
+a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container Spacing */
+.section {
+    margin-bottom: 30px;
+}
+
+.section ul {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .skill-progress .progress-bar {
+        font-size: 0.8em;
+    }
+}
