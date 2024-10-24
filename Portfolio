@@ -1,90 +1,130 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heather Berg - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link to your existing CSS file -->
+    <style>
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1b1f23;
-    color: #ffffff;
-    line-height: 1.6;
-}
+        .portfolio-item {
+            width: 30%;
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-header {
-    background: #24292e;
-    padding: 1rem;
-    text-align: center;
-}
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
 
-nav ul {
-    list-style: none;
-}
+        .portfolio-item-content {
+            padding: 15px;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
+        .portfolio-item h3 {
+            margin: 0;
+            color: #005f73;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
+        .portfolio-item p {
+            color: #333;
+        }
 
-h1, h2 {
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 1rem;
-}
+        .portfolio-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #005f73;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
-.intro {
-    padding: 3rem;
-    text-align: center;
-    background: #0366d6;
-}
+        .portfolio-item a:hover {
+            background-color: #0a9396;
+        }
 
-.intro p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-}
+        .portfolio-header {
+            text-align: center;
+            padding: 20px;
+            color: #005f73;
+        }
 
-.cta-button {
-    background: #28a745;
-    color: #ffffff;
-    padding: 0.75rem 2rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    margin-top: 1.5rem;
-    display: inline-block;
-}
+        .back-to-home {
+            display: inline-block;
+            margin-top: 20px;
+            color: #005f73;
+            text-decoration: none;
+        }
 
-.cta-button:hover {
-    background-color: #218838;
-}
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-.skills-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 2rem;
-}
+    <header>
+        <h1>Heather Berg's Portfolio</h1>
+        <p>Explore case studies and projects showcasing my work as a Senior Content Designer & Technical Writer.</p>
+    </header>
 
-.skills-list li {
-    margin: 0 1rem;
-}
+    <div class="container">
+        <div class="portfolio-header">
+            <h2>Projects</h2>
+        </div>
 
-.skills-list img {
-    width: 30px;
-    height: 30px;
-    margin-right: 0.5rem;
-}
+        <div class="portfolio-grid">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item">
+                <img src="assets/img/project1.jpg" alt="Project 1">
+                <div class="portfolio-item-content">
+                    <h3>Project Title 1</h3>
+                    <p>A brief description of the project goals, challenges, and outcomes.</p>
+                    <a href="portfolio/project1.html">View Project</a>
+                </div>
+            </div>
 
-footer {
-    background-color: #24292e;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item">
+                <img src="assets/img/project2.jpg" alt="Project 2">
+                <div class="portfolio-item-content">
+                    <h3>Project Title 2</h3>
+                    <p>A brief description of the project goals, challenges, and outcomes.</p>
+                    <a href="portfolio/project2.html">View Project</a>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item">
+                <img src="assets/img/project3.jpg" alt="Project 3">
+                <div class="portfolio-item-content">
+                    <h3>Project Title 3</h3>
+                    <p>A brief description of the project goals, challenges, and outcomes.</p>
+                    <a href="portfolio/project3.html">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-header">
+            <a href="index.html" class="back-to-home">Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Heather Berg. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
