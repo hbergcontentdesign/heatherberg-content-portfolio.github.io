@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heather Berg - Content Design Portfolio</title>
+    <title>Heather Berg - Resume & Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
@@ -13,36 +14,80 @@
             <h1>Heather Berg</h1>
             <p>Senior Content Designer | Technical Writer</p>
             <nav>
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
+                <a href="#resume">Resume</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
         <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I am a seasoned Content Designer and Technical Writer with over 10 years of experience creating 
-                engaging, SEO-driven content, user guides, and technical documentation. I specialize in delivering 
-                clear, user-centered content for B2B SaaS products, focusing on improving product usability and 
-                driving organic traffic. My skills in UX writing, SEO best practices, and content strategy have helped 
-                clients achieve higher engagement and better user experiences.
-            </p>
-            <a href="#projects" class="cta-button">Explore My Work</a>
+            <h2>Resume</h2>
+            <div class="resume-grid">
+                <div class="summary">
+                    <h3>Professional Summary</h3>
+                    <p>
+                        Experienced Senior Content Designer and Technical Writer with over 10 years of experience 
+                        creating engaging, user-centered content for B2B SaaS products. Skilled in content strategy, 
+                        UX writing, and technical documentation. Proven track record of driving organic traffic 
+                        through SEO best practices and optimizing content for user engagement.
+                    </p>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <div class="job">
+                        <h4>Senior Content Designer, Facil-IT</h4>
+                        <p>Remote | Nov 2023 - Oct 2024</p>
+                        <ul>
+                            <li>Led content design for user guides and release notes templates.</li>
+                            <li>Collaborated with cross-functional teams to enhance UX.</li>
+                            <li>Managed documentation tasks using Jira and Confluence.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h4>Senior Content Designer, AvidXchange</h4>
+                        <p>Remote | Jul 2019 - Oct 2023</p>
+                        <ul>
+                            <li>Spearheaded content design for financial SaaS products.</li>
+                            <li>Created user manuals, onboarding content, and SEO-optimized content.</li>
+                            <li>Mentored junior writers and implemented content strategy.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <h4>UX Writing & Content Strategy</h4>
+                            <div class="progress-bar"><div class="fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>HTML, CSS, Markdown</h4>
+                            <div class="progress-bar"><div class="fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>SEO Tools (SEMRush, Ahrefs)</h4>
+                            <div class="progress-bar"><div class="fill" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Portfolio</h2>
             <div class="card-container">
-                <!-- Project Card 1 -->
+                <!-- Portfolio Item 1 -->
                 <div class="card">
                     <img src="assets/images/user-guide-thumbnail.png" alt="User Guide Thumbnail">
                     <h3>Company Setup Guide - Facil-IT</h3>
@@ -50,7 +95,7 @@
                     <a href="assets/guides/company-setup-guide.pdf" class="cta-button">View Guide</a>
                 </div>
 
-                <!-- Project Card 2 -->
+                <!-- Portfolio Item 2 -->
                 <div class="card">
                     <img src="assets/images/release-notes-thumbnail.png" alt="Release Notes Thumbnail">
                     <h3>Release Notes - Version 2.1.0</h3>
@@ -58,7 +103,7 @@
                     <a href="assets/release-notes/release-notes-v2.1.pdf" class="cta-button">View Release Notes</a>
                 </div>
 
-                <!-- Project Card 3 -->
+                <!-- Portfolio Item 3 (GIF Tutorial) -->
                 <div class="card">
                     <img src="assets/gifs/dispatch-work-orders.gif" alt="Work Orders GIF Tutorial">
                     <h3>How to Dispatch Work Orders</h3>
@@ -68,65 +113,11 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Senior Content Designer, Facil-IT</h3>
-                <p>Remote | Nov 2023 - Oct 2024</p>
-                <ul>
-                    <li>Led content design for user guides, ensuring clarity and usability.</li>
-                    <li>Collaborated with cross-functional teams to deliver user-centered content.</li>
-                    <li>Utilized Figma and Jira to manage design and content workflows.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Senior Content Designer, AvidXchange</h3>
-                <p>Remote | Jul 2019 - Oct 2023</p>
-                <ul>
-                    <li>Developed content strategies for financial products in a B2B SaaS environment.</li>
-                    <li>Created detailed user manuals and onboarding content.</li>
-                    <li>Mentored junior writers and implemented SEO strategies to drive organic traffic.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skill-grid">
-                <div class="skill-item">
-                    <h3>UX Writing & Content Strategy</h3>
-                    <div class="skill-bar"><div class="bar" style="width: 90%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>HTML, CSS, Markdown</h3>
-                    <div class="skill-bar"><div class="bar" style="width: 85%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>Adobe Creative Suite</h3>
-                    <div class="skill-bar"><div class="bar" style="width: 80%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>SEO Tools (SEMRush, Ahrefs, Google Search Console)</h3>
-                    <div class="skill-bar"><div class="bar" style="width: 75%;"></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>If you'd like to work with me or discuss a project, feel free to reach out.</p>
+            <p>Have a project in mind or want to collaborate? Reach out to me!</p>
             <a href="mailto:hberg.contentdesign@gmail.com" class="cta-button">Email Me</a>
         </div>
     </section>
@@ -137,4 +128,3 @@
     </footer>
 </body>
 </html>
-
