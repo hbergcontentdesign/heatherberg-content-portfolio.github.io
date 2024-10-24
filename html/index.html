@@ -2,102 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Your Name | Senior Content Designer & Technical Writer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heather Berg - Resume & Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Your Logo</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <h1>Heather Berg</h1>
-            <p>Senior Content Designer | Technical Writer</p>
-            <nav>
-                <a href="#resume">Resume</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <h1>Your Name</h1>
+            <p>Senior Content Designer & Technical Writer</p>
         </div>
     </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>[Insert a brief bio about yourself, highlighting your experience and passion for content design and technical writing.]</p>
+        </div>
+    </section>
 
     <!-- Resume Section -->
     <section id="resume" class="resume">
         <div class="container">
             <h2>Resume</h2>
             <div class="resume-grid">
+                <!-- Professional Summary -->
                 <div class="summary">
                     <h3>Professional Summary</h3>
-                    <p>
-                        Experienced Senior Content Designer and Technical Writer with over 10 years of experience 
-                        creating engaging, user-centered content for B2B SaaS products. Skilled in content strategy, 
-                        UX writing, and technical documentation. Proven track record of driving organic traffic 
-                        through SEO best practices and optimizing content for user engagement.
-                    </p>
+                    <p>[Provide a concise summary of your professional background and expertise.]</p>
                 </div>
 
-                <!-- Experience Section -->
+                <!-- Experience -->
                 <div class="experience">
                     <h3>Experience</h3>
-                    <div class="job">
-                        <h4>Senior Content Designer, Facil-IT</h4>
-                        <p>Remote | Nov 2023 - Oct 2024</p>
-                        <ul>
-                            <li>Led content design for user guides and release notes templates.</li>
-                            <li>Collaborated with cross-functional teams to enhance UX.</li>
-                            <li>Managed documentation tasks using Jira and Confluence.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h4>Senior Content Designer, AvidXchange</h4>
-                        <p>Remote | Jul 2019 - Oct 2023</p>
-                        <ul>
-                            <li>Spearheaded content design for financial SaaS products.</li>
-                            <li>Created user manuals, onboarding content, and SEO-optimized content.</li>
-                            <li>Mentored junior writers and implemented content strategy.</li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>
+                            <h4>Job Title at Company</h4>
+                            <p>Duration</p>
+                            <p>[Describe your key responsibilities and achievements in this role.]</p>
+                        </li>
+                        <!-- Add more positions as needed -->
+                    </ul>
                 </div>
 
-                <!-- Skills Section -->
+                <!-- Skills -->
                 <div class="skills">
                     <h3>Skills</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <h4>UX Writing & Content Strategy</h4>
-                            <div class="progress-bar"><div class="fill" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>HTML, CSS, Markdown</h4>
-                            <div class="progress-bar"><div class="fill" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>SEO Tools (SEMRush, Ahrefs)</h4>
-                            <div class="progress-bar"><div class="fill" style="width: 80%;"></div></div>
-                        </div>
-                    </div>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <p>Skill Name</p>
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <!-- Add more skills as needed -->
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <!-- Projects Section -->
+    <section id="projects" class="portfolio">
         <div class="container">
-            <h2>Portfolio</h2>
+            <h2>Projects</h2>
             <div class="card-container">
-                <!-- Portfolio Item 1 -->
+                <!-- Project Card -->
                 <div class="card">
-                    <img src="assets/images/user-guide-thumbnail.png" alt="User Guide Thumbnail">
-                    <h3>Company Setup Guide - Facil-IT</h3>
-                    <p>Updated: September 25, 2024</p>
-                    <a href="assets/guides/company-setup-guide.pdf" class="cta-button">View Guide</a>
+                    <img src="assets/images/project1.jpg" alt="Project 1">
+                    <h3>Project Title</h3>
+                    <p>[Brief description of the project or documentation example.]</p>
+                    <a href="#" class="cta-button">View Project</a>
                 </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
 
-                <!-- Portfolio Item 2 -->
-                <div class="card">
-                    <img src="assets/images/release-notes-thumbnail.png" alt="Release Notes Thumbnail">
-                    <h3>Release Notes - Version 2.1.0</h3>
-                    <p>Updated: August 10, 2024</p>
-                    <a href="asset
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you're interested in collaborating or have any questions, feel free to reach out.</p>
+            <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
