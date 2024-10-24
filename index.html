@@ -203,3 +203,28 @@
                 <li><i class="fas fa-code"></i> HTML, CSS, Markdown for Interactive Content</li>
                 <div class="skill-progress">
                     <div class="progress-bar" style="width: 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heather Berg - Interactive Resume Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">  <!-- Add this line to link the CSS file -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.section h2');
+            sections.forEach(section => {
+                section.addEventListener('click', () => {
+                    const list = section.nextElementSibling;
+                    if (list.classList.contains('visible')) {
+                        list.classList.remove('visible');
+                        section.parentElement.classList.remove('collapsed');
+                    } else {
+                        list.classList.add('visible');
+                        section.parentElement.classList.add('collapsed');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
