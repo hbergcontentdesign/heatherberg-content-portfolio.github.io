@@ -1,0 +1,174 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #22196C;
+}
+
+p {
+    color: #444;
+}
+
+/* Header */
+.header {
+    background-color: #22196C;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.header nav a {
+    margin: 0 15px;
+    color: #F70200;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #22196C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about .cta-button:hover {
+    background-color: #F70200;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+.card .cta-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #22196C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card .cta-button:hover {
+    background-color: #F70200;
+}
+
+/* Experience Section */
+.experience {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
+
+.experience-item {
+    margin-bottom: 40px;
+}
+
+.experience-item h3 {
+    color: #22196C;
+}
+
+/* Skills Section */
+.skills {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.skill-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    width: 250px;
+    margin-bottom: 40px;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 10px;
+}
+
+.skill-bar .bar {
+    height: 100%;
+    background-color: #22196C;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #22196C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact .cta-button:hover {
+    background-color: #F70200;
+}
+
+/* Footer */
+footer {
+    background-color: #22196C;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
