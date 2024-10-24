@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title 1 - Heather Berg Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h2 {
+            color: #005f73;
+        }
+
+        .project-content p {
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .project-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .back-to-portfolio {
+            display: inline-block;
+            margin-top: 20px;
+            color: #005f73;
+            text-decoration: none;
+        }
+
+        .back-to-portfolio:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Project Title 1</h1>
+        <p>Case Study: Content Design and Strategy for a SaaS Product</p>
+    </header>
+
+    <div class="container project-content">
+        <h2>Project Overview</h2>
+        <p>This project involved developing a comprehensive content strategy for a SaaS platform, focusing on improving user engagement and simplifying product documentation.</p>
+
+        <img src="../assets/img/project1-screenshot.jpg" alt="Project Screenshot">
+
+        <h2>Challenges</h2>
+        <p>One of the main challenges was transforming complex product features into easy-to-understand guides for a diverse audience. I collaborated with cross-functional teams to identify pain points and created detailed user manuals that streamlined the user onboarding process.</p>
+
+        <h2>Tools Used</h2>
+        <p>Figma, Adobe XD, Jira, Confluence, HTML, CSS</p>
+
+        <h2>Outcome</h2>
+        <p>The project resulted in a 20% increase in user engagement and improved customer satisfaction with the product documentation.</p>
+
+        <a href="../portfolio.html" class="back-to-portfolio">Back to Portfolio</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Heather Berg. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
