@@ -5,87 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heather Berg - Interactive Resume Showcase</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #003366;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .container {
-            max-width: 960px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #003366;
-            border-bottom: 2px solid #003366;
-            padding-bottom: 5px;
-            cursor: pointer;
-            position: relative;
-        }
-        h2::after {
-            content: "\f078";
-            font-family: "FontAwesome";
-            font-size: 0.8em;
-            position: absolute;
-            right: 0;
-            transition: transform 0.3s;
-        }
-        .collapsed h2::after {
-            transform: rotate(-90deg);
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-            display: none;
-        }
-        ul.visible {
-            display: block;
-        }
-        ul li {
-            margin: 10px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #003366;
-            color: #ffffff;
-            margin-top: 40px;
-        }
-        .github-link a {
-            color: #003366;
-            font-weight: bold;
-        }
-        .skill-progress {
-            width: 100%;
-            background-color: #f1f1f1;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-        .skill-progress .progress-bar {
-            height: 20px;
-            text-align: center;
-            color: #fff;
-            background-color: #003366;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file for styling -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('.section h2');
@@ -126,7 +46,7 @@
                     <strong>Senior Content Designer, Facil-IT</strong>
                     <p><em>Remote, United States | Nov 2023 - Oct 2024</em></p>
                     <ul>
-                        <li>Led content design for the development of user guides and release notes templates, ensuring clarity and usability.</li>
+                        <li>Led content design for user guides and release notes templates, ensuring clarity and usability.</li>
                         <li>Utilized Figma to develop user experiences and collaborated on design prototypes.</li>
                         <li>Managed documentation tasks using Jira and Confluence, keeping up-to-date with product enhancements.</li>
                     </ul>
@@ -202,29 +122,41 @@
                 </div>
                 <li><i class="fas fa-code"></i> HTML, CSS, Markdown for Interactive Content</li>
                 <div class="skill-progress">
-                    <div class="progress-bar" style="width: 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heather Berg - Interactive Resume Showcase</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">  <!-- Add this line to link the CSS file -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.section h2');
-            sections.forEach(section => {
-                section.addEventListener('click', () => {
-                    const list = section.nextElementSibling;
-                    if (list.classList.contains('visible')) {
-                        list.classList.remove('visible');
-                        section.parentElement.classList.remove('collapsed');
-                    } else {
-                        list.classList.add('visible');
-                        section.parentElement.classList.add('collapsed');
-                    }
-                });
-            });
-        });
-    </script>
-</head>
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+                <li><i class="fas fa-edit"></i> Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+                <li><i class="fas fa-project-diagram"></i> Task Management: JIRA & Confluence</li>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 88%;">88%</div>
+                </div>
+                <li><i class="fas fa-chart-line"></i> SEO Tools: SEMRush, Ahref, Google Search Console</li>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+                <li><i class="fas fa-users"></i> Cross-Functional Collaboration & Stakeholder Engagement</li>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 92%;">92%</div>
+                </div>
+                <li><i class="fas fa-tasks"></i> Project Management & Prioritization</li>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+            </ul>
+        </section>
 
+        <section class="section">
+            <h2>Portfolio</h2>
+            <ul class="visible">
+                <li>Visit my GitHub page for interactive documentation, design prototypes, and SEO-optimized content samples: <span class="github-link"><a href="https://heatherberg-content-portfolio.github.io">GitHub Portfolio</a></span>.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Heather Berg. All rights reserved.</p>
+    </footer>
+</body>
+</html>
