@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Heather Berg - Senior Content Designer</title>
     <style>
-        /* Reset */
+        /* Global Styling */
         * {
             margin: 0;
             padding: 0;
@@ -16,68 +15,51 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: #E0E0E0;
-            line-height: 1.6;
-        }
-
-        /* Color Scheme */
-        :root {
-            --primary-color: #121212; /* Black */
-            --secondary-color: #f5f5f5; /* Light gray for background */
-            --accent-color: #3bafda; /* Accent light blue */
-            --text-color: #E0E0E0; /* Soft white */
-            --text-alt-color: #cccccc; /* Lighter gray for text */
-            --card-bg: #1e1e1e; /* Dark gray for cards */
-            --footer-bg: #0f0f0f; /* Footer background */
-        }
-
-        /* General Layout */
-        header, section, footer {
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 1200px;
-            border-radius: 8px;
-            background-color: var(--primary-color);
-        }
-
-        h1, h2, h3 {
-            color: var(--text-color);
-        }
-
-        p, li {
-            color: var(--text-alt-color);
+            background-color: #f8f9fa;
+            color: #2d2d2d;
             line-height: 1.8;
+            padding: 0 20px;
         }
 
-        a {
-            text-decoration: none;
-            color: var(--accent-color);
+        /* Color Variables */
+        :root {
+            --primary-color: #2d2d2d;
+            --secondary-color: #f0f4f8;
+            --accent-color: #3f72af;
+            --text-color: #2d2d2d;
+            --white-space: #ffffff;
+            --button-color: #3f72af;
         }
 
-        /* Header */
+        /* Layout */
         header {
             text-align: center;
+            padding: 60px 0;
             background-color: var(--primary-color);
-            color: var(--text-color);
-            padding: 40px 0;
+            color: var(--white-space);
         }
 
-        header h1 {
-            font-size: 48px;
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: var(--accent-color);
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
+            margin-top: 20px;
         }
 
         nav ul li a {
-            font-size: 20px;
-            color: var(--text-color);
-            padding: 10px 20px;
+            font-size: 22px;
+            color: var(--white-space);
+            padding: 10px 25px;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
@@ -87,113 +69,113 @@
             color: var(--primary-color);
         }
 
-        /* About Me Section */
-        #about {
-            text-align: left;
-            padding-left: 20px;
-            background-color: var(--card-bg);
-            border-radius: 10px;
+        /* Section Styling */
+        section {
+            margin: 40px auto;
+            padding: 60px;
+            background-color: var(--background-light);
+            max-width: 1200px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+            line-height: 1.8;
         }
 
-        #about h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        section h2 {
+            text-align: left;
+            font-size: 40px;
+        }
+
+        /* About Me Section */
+        #about {
+            background-color: var(--secondary-color);
         }
 
         #about p {
-            max-width: 900px;
-            margin: 20px 0;
-            font-size: 18px;
+            font-size: 24px;
+            margin-bottom: 25px;
+            max-width: 1000px;
         }
 
         /* Skills Section */
         #skills {
             text-align: center;
-            background-color: var(--primary-color);
-            padding: 40px;
-        }
-
-        #skills h2 {
-            margin-bottom: 30px;
-            color: var(--accent-color);
+            background-color: var(--background-light);
         }
 
         .skills-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .skill-item {
-            flex: 1 1 250px;
-            padding: 20px;
-            background-color: var(--card-bg);
-            border-radius: 8px;
+            flex: 1 1 300px;
+            padding: 25px;
+            background-color: var(--secondary-color);
+            border-radius: 12px;
             text-align: center;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .skill-item i {
-            font-size: 40px;
-            margin-bottom: 10px;
-            color: var(--accent-color);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
         .skill-item:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
         }
 
-        /* Experience Section */
-        #experience h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 20px;
+        .skill-item i {
+            font-size: 50px;
+            margin-bottom: 15px;
             color: var(--accent-color);
         }
 
+        /* Experience Section */
+        #experience {
+            background-color: var(--secondary-color);
+        }
+
         .experience-item {
-            background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .experience-item h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 30px;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+
+        .experience-item p {
+            font-size: 20px;
+            color: var(--text-color);
         }
 
         .experience-item ul {
-            padding-left: 20px;
+            margin-top: 15px;
+            padding-left: 30px;
             list-style-type: disc;
-            color: var(--text-alt-color);
+            color: var(--text-color);
         }
 
         /* Contact Section */
         #contact {
             text-align: center;
-            margin-top: 40px;
-            background-color: var(--primary-color);
-            padding: 40px;
+            background-color: var(--background-light);
         }
 
         #contact a {
-            font-size: 18px;
+            font-size: 20px;
+            color: var(--accent-color);
+            text-decoration: none;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            background-color: var(--footer-bg);
-            color: var(--text-alt-color);
+            background-color: var(--primary-color);
+            color: var(--white-space);
             padding: 20px;
-        }
-
-        footer p {
-            margin: 5px 0;
+            font-size: 18px;
         }
 
         footer a {
@@ -202,9 +184,21 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .skills-list {
+            section {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            nav ul {
                 flex-direction: column;
-                align-items: center;
+                gap: 15px;
             }
         }
     </style>
@@ -230,10 +224,10 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            With a dynamic career spanning over 10 years, I bring expertise in content strategy, UX writing, and technical documentation. My focus is on crafting intuitive, user-centered experiences across multiple platforms, especially in the fields of software solutions and AP automation. I have worked with major clients, streamlining ERP integrations and leading content design teams to deliver impactful results.
+            As a Senior Content Designer with over a decade of experience in content strategy, UX writing, and technical documentation, I bring a wealth of expertise in designing user-centered content for software solutions, AP automation, and ERP integrations. My experience spans leading cross-functional teams, building seamless content workflows, and delivering impactful documentation that empowers users.
         </p>
         <p>
-            I thrive in collaborative environments where I can lead cross-functional teams, working closely with product managers, engineers, and designers. My experience includes developing content workflows, creating interactive user guides, and improving product adoption for enterprise-level solutions. I am adept at using tools like Figma, Jira, and Confluence to deliver documentation and content that exceeds business goals and enhances user experiences.
+            My approach to content design involves a deep understanding of both user needs and technical requirements, resulting in solutions that are both practical and intuitive. I excel at simplifying complex processes, creating guides, user manuals, and product content that boost product adoption and improve customer satisfaction.
         </p>
     </section>
 
@@ -244,32 +238,32 @@
             <div class="skill-item">
                 <i class="fas fa-pencil-alt"></i>
                 <h4>Content Design</h4>
-                <p>Crafting engaging and user-focused content across digital platforms.</p>
+                <p>Crafting user-focused content for intuitive software experiences.</p>
             </div>
             <div class="skill-item">
                 <i class="fas fa-code"></i>
                 <h4>HTML & CSS</h4>
-                <p>Building web content with seamless HTML & CSS integration.</p>
+                <p>Building responsive and clean-coded web content.</p>
             </div>
             <div class="skill-item">
                 <i class="fas fa-laptop-code"></i>
                 <h4>Figma</h4>
-                <p>Prototyping and wireframing for interactive content and UX design.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-book"></i>
-                <h4>Technical Writing</h4>
-                <p>Creating detailed manuals, training guides, and user documentation.</p>
+                <p>Prototyping and wireframing for seamless content design.</p>
             </div>
             <div class="skill-item">
                 <i class="fas fa-file-alt"></i>
-                <h4>AP Automation Solutions</h4>
-                <p>Specialized in ERP integrations and AP automation for businesses.</p>
+                <h4>Technical Writing</h4>
+                <p>Developing guides and manuals that simplify the complex.</p>
             </div>
             <div class="skill-item">
                 <i class="fas fa-project-diagram"></i>
+                <h4>AP Automation</h4>
+                <p>Expert in automating processes for accounting and finance.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-tools"></i>
                 <h4>Jira & Confluence</h4>
-                <p>Managing content workflows and product documentation tasks.</p>
+                <p>Managing content workflows and documentation tasks efficiently.</p>
             </div>
             <div class="skill-item">
                 <i class="fas fa-adobe"></i>
@@ -287,9 +281,9 @@
             <h3>Senior Content Designer | Facil-IT</h3>
             <p><em>Remote, United States | Nov 2023 - Present</em></p>
             <ul>
-                <li>Led content design for technical documentation, interactive user guides, and onboarding material for clients in the facilities management space.</li>
-                <li>Developed comprehensive content strategies to enhance product adoption, onboarding, and user engagement, cutting onboarding times by 20%.</li>
-                <li>Worked closely with product teams to build user-centered content workflows and ensured seamless integration with enterprise-level clients.</li>
+                <li>Led content design for interactive documentation, improving user onboarding by 20%.</li>
+                <li>Collaborated with UX and product teams to create user-friendly content workflows and templates in Figma.</li>
+                <li>Developed clear and intuitive user guides, increasing self-service success rates by 25%.</li>
             </ul>
         </div>
 
@@ -297,10 +291,9 @@
             <h3>Senior Content Designer | AvidXchange</h3>
             <p><em>Remote, United States | Jul 2019 - Oct 2023</em></p>
             <ul>
-                <li>Developed content for ERP integrations and AP automation, working with enterprise clients such as Buildium and QuickBooks users.</li>
-                <li>Produced detailed user guides, tutorials, and micro-learning modules that increased self-sufficiency and reduced support tickets.</li>
-                <li>Collaborated with cross-functional UX teams, ensuring consistent tone and clarity across all product documentation and releases.</li>
-                <li>Improved customer satisfaction by 15% through engaging, easy-to-follow documentation and tutorials.</li>
+                <li>Designed content strategies for AP automation, working with major ERP systems like QuickBooks and Yardi.</li>
+                <li>Created user guides and micro-learning materials that improved adoption rates by 15%.</li>
+                <li>Implemented user-centered content strategies to streamline ERP integrations for 8,000+ businesses.</li>
             </ul>
         </div>
 
@@ -308,9 +301,9 @@
             <h3>Technical Writer | P2 Energy Solutions</h3>
             <p><em>Remote, United States | Apr 2017 - Jul 2019</em></p>
             <ul>
-                <li>Authored installation guides, help documentation, and product training materials for software products such as Merrick and IDEAS.</li>
-                <li>Collaborated with SMEs to develop accurate technical content, simplifying complex concepts for non-technical users.</li>
-                <li>Streamlined content processes, reducing support tickets by 12% through improved documentation.</li>
+                <li>Developed comprehensive user documentation and technical guides for various software solutions.</li>
+                <li>Simplified complex product features for non-technical users, reducing support tickets by 12%.</li>
+                <li>Created training material, ensuring a smooth onboarding experience for new users.</li>
             </ul>
         </div>
 
@@ -318,9 +311,9 @@
             <h3>Technical Writer | Weatherford International</h3>
             <p><em>Houston, TX | Mar 2013 - Feb 2016</em></p>
             <ul>
-                <li>Produced technical manuals and training materials for LWD and MWD oilfield equipment.</li>
-                <li>Managed document version control for global distribution using Windchill.</li>
-                <li>Improved the clarity and accessibility of highly technical documentation, reducing operational errors by 10%.</li>
+                <li>Authored training materials and technical documentation for MWD/LWD equipment.</li>
+                <li>Managed version control and global document distribution using Windchill.</li>
+                <li>Increased operational efficiency by 10% through clear, well-structured technical content.</li>
             </ul>
         </div>
 
@@ -328,12 +321,11 @@
             <h3>U.S. Army | Surgical Tech / Soldier</h3>
             <p><em>San Antonio, TX | Mar 2003 - Feb 2005</em></p>
             <ul>
-                <li>Supported surgical teams in high-stakes environments, maintaining sterile fields and ensuring instrument readiness.</li>
-                <li>Completed rigorous medical field training, developing technical expertise in medical operations and personnel logistics.</li>
-                <li>Demonstrated leadership and adaptability in challenging, high-pressure environments, ensuring successful medical outcomes.</li>
+                <li>Supported surgical teams in high-stress environments, ensuring smooth operations.</li>
+                <li>Specialized in medical logistics and managing field operations under challenging conditions.</li>
+                <li>Gained leadership and adaptability through extensive field training and medical support missions.</li>
             </ul>
         </div>
-
     </section>
 
     <!-- Contact Section -->
