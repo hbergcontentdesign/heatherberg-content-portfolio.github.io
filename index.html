@@ -4,15 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Heather Berg - Senior Content Designer</title>
-
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
@@ -21,351 +16,338 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F4F4F9;
-            color: #333;
-            line-height: 1.8;
+            background-color: #121212;
+            color: #E0E0E0;
+            line-height: 1.6;
+        }
+
+        /* Color Scheme */
+        :root {
+            --primary-color: #121212; /* Black */
+            --secondary-color: #f5f5f5; /* Light gray for background */
+            --accent-color: #3bafda; /* Accent light blue */
+            --text-color: #E0E0E0; /* Soft white */
+            --text-alt-color: #cccccc; /* Lighter gray for text */
+            --card-bg: #1e1e1e; /* Dark gray for cards */
+            --footer-bg: #0f0f0f; /* Footer background */
+        }
+
+        /* General Layout */
+        header, section, footer {
+            margin: 20px auto;
             padding: 20px;
-            transition: all 0.3s ease;
+            max-width: 1200px;
+            border-radius: 8px;
+            background-color: var(--primary-color);
+        }
+
+        h1, h2, h3 {
+            color: var(--text-color);
+        }
+
+        p, li {
+            color: var(--text-alt-color);
+            line-height: 1.8;
         }
 
         a {
             text-decoration: none;
-            color: #0057A1;
-            transition: color 0.3s;
+            color: var(--accent-color);
         }
 
-        a:hover {
-            color: #FF6B6B;
-        }
-
-        h1, h2, h3 {
-            color: #002F65;
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 44px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #0057A1;
-        }
-
-        h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: none;
-            margin-left: 20px;
-        }
-
-        ul li {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        /* Sticky Navigation */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background-color: #002F65;
-            z-index: 1000;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            display: inline-block;
-        }
-
-        .navbar a:hover {
-            background-color: #FF6B6B;
-            color: white;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        /* Header Section */
+        /* Header */
         header {
             text-align: center;
-            margin-bottom: 40px;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 40px 0;
         }
 
         header h1 {
-            color: #0057A1;
-            font-size: 46px;
+            font-size: 48px;
         }
 
-        header p {
-            font-size: 20px;
-            color: #333;
-        }
-
-        /* Skills Section */
-        .skills-container {
-            background-color: #F0F5F9;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-
-        .skills {
+        nav ul {
+            list-style: none;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
 
-        .skill {
-            background-color: #0057A1;
-            padding: 12px 20px;
-            border-radius: 20px;
-            color: white;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        nav ul li a {
+            font-size: 20px;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
             transition: background-color 0.3s;
         }
 
-        .skill i {
-            color: #E0E1DD;
+        nav ul li a:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
         }
 
-        .skill:hover {
-            background-color: #FF6B6B;
+        /* About Me Section */
+        #about {
+            text-align: left;
+            padding-left: 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+        }
+
+        #about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            max-width: 900px;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        /* Skills Section */
+        #skills {
+            text-align: center;
+            background-color: var(--primary-color);
+            padding: 40px;
+        }
+
+        #skills h2 {
+            margin-bottom: 30px;
+            color: var(--accent-color);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-item {
+            flex: 1 1 250px;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-item i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
         }
 
         /* Experience Section */
-        .experience {
-            margin-top: 30px;
+        #experience h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
         }
 
-        .experience h3 {
-            color: #002F65;
-        }
-
-        /* Portfolio Section */
-        .portfolio-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .portfolio-card {
-            background-color: #F0F5F9;
+        .experience-item {
+            background-color: var(--card-bg);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
         }
 
-        .portfolio-card:hover {
-            transform: translateY(-10px);
+        .experience-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        .portfolio-card h4 {
-            font-size: 22px;
-            color: #0057A1;
+        .experience-item ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            color: var(--text-alt-color);
         }
 
-        .portfolio-card p {
-            font-size: 16px;
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            margin-top: 40px;
+            background-color: var(--primary-color);
+            padding: 40px;
+        }
+
+        #contact a {
+            font-size: 18px;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px 0;
-            background-color: #002F65;
-            color: #E0E1DD;
+            background-color: var(--footer-bg);
+            color: var(--text-alt-color);
+            padding: 20px;
         }
 
         footer p {
-            color: #E0E1DD;
+            margin: 5px 0;
         }
 
         footer a {
-            color: #FF6B6B;
+            color: var(--accent-color);
         }
 
-        footer a:hover {
-            color: #F7B801;
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
         }
-
-        .line {
-            margin: 30px 0;
-            height: 2px;
-            background-color: #E0E1DD;
-        }
-
-        /* Interactivity */
-        .portfolio-card:hover,
-        .skills .skill:hover {
-            cursor: pointer;
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-
-        .button {
-            background-color: #0057A1;
-            border: none;
-            padding: 12px 25px;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #FF6B6B;
-        }
-
     </style>
 </head>
 
 <body>
 
-    <!-- Sticky Navbar -->
-    <div class="navbar">
-        <a href="#summary">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </div>
+    <!-- Header -->
+    <header>
+        <h1>Heather Berg</h1>
+        <h2>Senior Content Designer</h2>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-        <!-- Header Section -->
-        <header class="contact-info">
-            <h1>Heather Berg</h1>
-            <p>Senior Content Designer & Technical Writer</p>
-            <p>Texas, USA | <a href="mailto:hberg.contentdesign@gmail.com">hberg.contentdesign@gmail.com</a> | 713-560-6761</p>
-            <p><a href="https://www.linkedin.com/in/heather-berg-02b6184a/" target="_blank">LinkedIn Profile</a> | <a href="https://yourportfolio.com" target="_blank">My Portfolio</a></p>
-        </header>
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            With a dynamic career spanning over 10 years, I bring expertise in content strategy, UX writing, and technical documentation. My focus is on crafting intuitive, user-centered experiences across multiple platforms, especially in the fields of software solutions and AP automation. I have worked with major clients, streamlining ERP integrations and leading content design teams to deliver impactful results.
+        </p>
+        <p>
+            I thrive in collaborative environments where I can lead cross-functional teams, working closely with product managers, engineers, and designers. My experience includes developing content workflows, creating interactive user guides, and improving product adoption for enterprise-level solutions. I am adept at using tools like Figma, Jira, and Confluence to deliver documentation and content that exceeds business goals and enhances user experiences.
+        </p>
+    </section>
 
-        <div class="line"></div>
-
-        <!-- Professional Summary -->
-        <section class="section" id="summary">
-            <h2>About Me</h2>
-            <p>
-                Senior Content Designer with 10+ years of experience in content strategy, UX writing, and technical documentation. Adept at crafting user-centered experiences for software solutions, AP automation, and ERP integrations. A creative problem solver skilled in leading teams, building workflows, and delivering highly functional user guides and manuals.
-            </p>
-        </section>
-
-        <div class="line"></div>
-
-        <!-- Skills Section -->
-        <section class="section skills-container" id="skills">
-            <h2>Key Skills</h2>
-            <div class="skills">
-                <div class="skill"><i class="fas fa-pencil-alt"></i>Content Design</div>
-                <div class="skill"><i class="fas fa-code"></i>HTML & CSS</div>
-                <div class="skill"><i class="fas fa-adobe"></i>Adobe Suite (Photoshop, Illustrator, InDesign)</div>
-                <div class="skill"><i class="fas fa-project-diagram"></i>Figma (Prototyping, Wireframes)</div>
-                <div class="skill"><i class="fas fa-file-alt"></i>Technical Writing</div>
-                <div class="skill"><i class="fas fa-cogs"></i>AP Automation Solutions</div>
-                <div class="skill"><i class="fas fa-tasks"></i>Jira & Confluence</div>
-                <div class="skill"><i class="fas fa-project-diagram"></i>Content Strategy</div>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Key Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <i class="fas fa-pencil-alt"></i>
+                <h4>Content Design</h4>
+                <p>Crafting engaging and user-focused content across digital platforms.</p>
             </div>
-        </section>
+            <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <h4>HTML & CSS</h4>
+                <p>Building web content with seamless HTML & CSS integration.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-laptop-code"></i>
+                <h4>Figma</h4>
+                <p>Prototyping and wireframing for interactive content and UX design.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-book"></i>
+                <h4>Technical Writing</h4>
+                <p>Creating detailed manuals, training guides, and user documentation.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-file-alt"></i>
+                <h4>AP Automation Solutions</h4>
+                <p>Specialized in ERP integrations and AP automation for businesses.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-project-diagram"></i>
+                <h4>Jira & Confluence</h4>
+                <p>Managing content workflows and product documentation tasks.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-adobe"></i>
+                <h4>Adobe Suite</h4>
+                <p>Proficient in Photoshop, Illustrator, and InDesign for design projects.</p>
+            </div>
+        </div>
+    </section>
 
-        <div class="line"></div>
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
 
-        <!-- Experience Section -->
-        <section class="section experience" id="experience">
-            <h2>Experience</h2>
+        <div class="experience-item">
             <h3>Senior Content Designer | Facil-IT</h3>
             <p><em>Remote, United States | Nov 2023 - Present</em></p>
             <ul>
-                <li>Led content design initiatives for technical documentation, interactive user guides, and onboarding material.</li>
-                <li>Developed strategies to improve product adoption, streamlining onboarding for enterprise clients.</li>
-                <li>Improved content workflows using Jira and Confluence, cutting documentation delivery times by 20%.</li>
+                <li>Led content design for technical documentation, interactive user guides, and onboarding material for clients in the facilities management space.</li>
+                <li>Developed comprehensive content strategies to enhance product adoption, onboarding, and user engagement, cutting onboarding times by 20%.</li>
+                <li>Worked closely with product teams to build user-centered content workflows and ensured seamless integration with enterprise-level clients.</li>
             </ul>
+        </div>
 
+        <div class="experience-item">
             <h3>Senior Content Designer | AvidXchange</h3>
             <p><em>Remote, United States | Jul 2019 - Oct 2023</em></p>
             <ul>
-                <li>Worked with clients like Buildium, designing content for seamless ERP integration.</li>
-                <li>Produced user guides, tutorials, and micro-learning materials for AP solutions like QuickBooks, Yardi.</li>
-                <li>Enhanced user self-sufficiency by developing interactive content.</li>
+                <li>Developed content for ERP integrations and AP automation, working with enterprise clients such as Buildium and QuickBooks users.</li>
+                <li>Produced detailed user guides, tutorials, and micro-learning modules that increased self-sufficiency and reduced support tickets.</li>
+                <li>Collaborated with cross-functional UX teams, ensuring consistent tone and clarity across all product documentation and releases.</li>
+                <li>Improved customer satisfaction by 15% through engaging, easy-to-follow documentation and tutorials.</li>
             </ul>
+        </div>
 
+        <div class="experience-item">
             <h3>Technical Writer | P2 Energy Solutions</h3>
             <p><em>Remote, United States | Apr 2017 - Jul 2019</em></p>
             <ul>
-                <li>Created installation guides, help documentation, and training materials for multiple software products.</li>
-                <li>Worked closely with SMEs to develop accurate technical content for non-technical audiences.</li>
+                <li>Authored installation guides, help documentation, and product training materials for software products such as Merrick and IDEAS.</li>
+                <li>Collaborated with SMEs to develop accurate technical content, simplifying complex concepts for non-technical users.</li>
+                <li>Streamlined content processes, reducing support tickets by 12% through improved documentation.</li>
             </ul>
-        </section>
+        </div>
 
-        <div class="line"></div>
+        <div class="experience-item">
+            <h3>Technical Writer | Weatherford International</h3>
+            <p><em>Houston, TX | Mar 2013 - Feb 2016</em></p>
+            <ul>
+                <li>Produced technical manuals and training materials for LWD and MWD oilfield equipment.</li>
+                <li>Managed document version control for global distribution using Windchill.</li>
+                <li>Improved the clarity and accessibility of highly technical documentation, reducing operational errors by 10%.</li>
+            </ul>
+        </div>
 
-        <!-- Portfolio Section -->
-        <section class="section" id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio-container">
-                <div class="portfolio-card">
-                    <h4>ERP Integration User Guides</h4>
-                    <p>Developed comprehensive user guides for ERP integration that improved client onboarding by 30%.</p>
-                </div>
-                <div class="portfolio-card">
-                    <h4>Interactive Prototypes</h4>
-                    <p>Designed interactive prototypes for AP automation software using Figma, streamlining stakeholder collaboration.</p>
-                </div>
-                <div class="portfolio-card">
-                    <h4>Release Notes Strategy</h4>
-                    <p>Created release notes templates and automated documentation workflows for large-scale SaaS deployments.</p>
-                </div>
-            </div>
-        </section>
+        <div class="experience-item">
+            <h3>U.S. Army | Surgical Tech / Soldier</h3>
+            <p><em>San Antonio, TX | Mar 2003 - Feb 2005</em></p>
+            <ul>
+                <li>Supported surgical teams in high-stakes environments, maintaining sterile fields and ensuring instrument readiness.</li>
+                <li>Completed rigorous medical field training, developing technical expertise in medical operations and personnel logistics.</li>
+                <li>Demonstrated leadership and adaptability in challenging, high-pressure environments, ensuring successful medical outcomes.</li>
+            </ul>
+        </div>
 
-        <div class="line"></div>
+    </section>
 
-        <!-- User Guides Section -->
-        <section class="section user-guide">
-            <h2>User Guides</h2>
-            <div class="step">
-                <h3>Company Setup Guide</h3>
-                <p>This guide walks users through setting up their company profile in the system for communication and workflow automation.</p>
-                <img src="https://via.placeholder.com/750x459" alt="User Guide Example">
-            </div>
-        </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:hberg.contentdesign@gmail.com">hberg.contentdesign@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/heather-berg-02b6184a" target="_blank">linkedin.com/in/heather-berg</a></p>
+        <p>Portfolio: <a href="https://yourportfolio.com" target="_blank">yourportfolio.com</a></p>
+    </section>
 
-        <div class="line"></div>
-
-      <!-- Footer -->
-https://www.linkedin.com/in/heather-berg-02b6184a/
-
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Heather Berg. All rights reserved.</p>
+    </footer>
 
 </body>
 
